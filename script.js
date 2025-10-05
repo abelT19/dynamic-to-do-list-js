@@ -14,14 +14,16 @@ document.addEventListener('DOMContentLoaded', function () {
       return;
     }
 
-    // Create list item and remove button
+    // Create list item
     const li = document.createElement('li');
     li.textContent = taskText;
 
+    // Create remove button
     const removeButton = document.createElement('button');
     removeButton.textContent = "Remove";
-    removeButton.className = 'remove-btn';
+    removeButton.classList.add('remove-btn'); // Use classList.add instead of className
 
+    // Remove task on click
     removeButton.onclick = function () {
       taskList.removeChild(li);
     };
